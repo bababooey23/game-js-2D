@@ -1,0 +1,38 @@
+
+    .field {
+        border:1px solid red;
+        height:300px;
+        width:450px;
+        position: relative;
+    }
+    
+    .player {
+        border:1px solid red;
+        height:30px;
+        background-color: darkolivegreen;
+        width:30px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .eminem {
+        border:1px solid red;
+        height:30px;
+        background-color: floralwhite;
+        width:30px;
+        opacity: 0.8;
+
+        position: absolute;
+        top: 120;
+        left: 210;
+    } 
+    .display-hp {
+        border:1px solid red;
+        height:20px;
+        width:100px;
+
+        position: absolute;
+        top: 50;
+        left: 480;
+    }       

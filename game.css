@@ -35,4 +35,35 @@
         position: absolute;
         top: 50;
         left: 480;
-    }       
+    }   
+    .display-goal {
+        border:1px solid red;
+        height:20px;
+        width:100px;
+
+        position: absolute;
+        top: 90;
+        left: 480;
+    }  
+    .letter {
+        border:1px solid red;
+        height:30px;
+        width:30px;
+
+        position: absolute;
+        top: 30;
+        left: 90;
+    } 
+     
+    #letter-two {
+        top: 180;
+        left: 90;
+    }   
+    #letter-three {
+        top: 30;
+        left: 240;
+    } 
+    #letter-four {
+        top: 120;
+        left: 210;
+    }

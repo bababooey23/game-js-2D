@@ -3,6 +3,9 @@ let y = 0;
 let enemyY = 120;
 let enemyDirection = 'down';
 let HP = 100;
+let letterProgress = 0;
+let goalProgress = 4;
+
 function goRight (){
     let element = document.getElementById('player-one');
     x = x + 30;
@@ -12,7 +15,10 @@ function goRight (){
         return;
     }
     checkBomb();
-    
+    checkLetterOne();
+    checkLetterTwo();
+    checkLetterThree();
+    checkLetterFour();    
     element.style.left = x;
 }
 function goLeft (){
@@ -25,7 +31,13 @@ function goLeft (){
     }
     element.style.left = x;
     checkBomb();
+    checkLetterOne();
+    checkLetterTwo();
+    checkLetterThree();
+    checkLetterFour();
+
 }
+
 function goUp (){
     let element = document.getElementById('player-one');
     y = y - 30;
@@ -36,6 +48,11 @@ function goUp (){
     }
     element.style.top = y;
     checkBomb();
+    checkLetterOne();
+    checkLetterTwo();
+    checkLetterThree();
+    checkLetterFour();
+
 }
 function goDown (){
     let element = document.getElementById('player-one');
@@ -47,6 +64,11 @@ function goDown (){
     }
     element.style.top = y;
     checkBomb();
+    checkLetterOne();
+    checkLetterTwo();
+    checkLetterThree();
+    checkLetterFour();
+
 }
 
 function enemyGoDown (){
@@ -98,7 +120,7 @@ function death () {
         let element = document.getElementById('player-one');
         element.style.top = y;
         element.style.left = x;
-        alert("удалить майнкрафт");
+        alert("будь лохом");
         HP = 100;
     }
 }
@@ -119,5 +141,28 @@ function onKey (eventOlolo) {
         goRight();
     }
 }
-
+function checkLetterOne() {
+    if (y === 30 && x === 90 && letterProgress === 0) {
+        letterProgress = 1;
+        console.log('ж', letterProgress);
+    }
+}
+function checkLetterTwo() {
+    if (y === 180 && x === 90 && letterProgress === 1) {
+        letterProgress = 2;
+        console.log('о', letterProgress);
+    }
+}
+ function checkLetterThree() {
+     if (y === 30 && x === 240 && letterProgress === 2) {
+         letterProgress = 3;
+         console.log('п', letterProgress);
+     }
+}
+function checkLetterFour() {
+    if (y === 120 && x === 210 && letterProgress === 3) {
+        letterProgress = 4;
+        console.log('а', letterProgress);
+    }
+}
 document.body.addEventListener('keydown', onKey);
